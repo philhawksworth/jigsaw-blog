@@ -1,0 +1,7 @@
+/build_local/
+/node_modules/
+/source/css/
+/source/fonts/
+/source/js/
+/source/mix-manifest.json
+/vendor/
