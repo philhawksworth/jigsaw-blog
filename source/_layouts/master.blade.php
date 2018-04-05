@@ -9,7 +9,9 @@
         {{ !empty($__env->yieldContent('title')) ? ' | ' : '' }}
         {{ 'Site Name' }}
     </title>
-    {{-- <link rel="icon" href="/favicon.ico"> --}}
+
+    @include('_partials.favicon')
+
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
