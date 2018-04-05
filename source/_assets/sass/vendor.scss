@@ -1,0 +1,10 @@
+$primary: #f4645f;
+$body-background-color: #eee;
+
+// Bulma + Bulmaswatch
+@import "node_modules/bulmaswatch/journal/variables";
+@import "node_modules/bulma/bulma";
+@import "node_modules/bulmaswatch/journal/overrides";
+
+// Font Awesome
+@import "node_modules/font-awesome/css/font-awesome.min";

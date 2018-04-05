@@ -13,5 +13,7 @@ mix.webpackConfig({
 
 mix
     .js('source/_assets/js/main.js', 'js')
+    .extract(['vue'])
     .sass('source/_assets/sass/main.scss', 'css')
+    .sass('source/_assets/sass/vendor.scss', 'css')
     .version();

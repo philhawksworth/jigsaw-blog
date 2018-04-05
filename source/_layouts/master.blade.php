@@ -10,12 +10,15 @@
         {{ 'Site Name' }}
     </title>
     {{-- <link rel="icon" href="/favicon.ico"> --}}
+    <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <h1>Parent template</h1>
     @yield('content')
 
+    <script src="/js/manifest.js"></script>
+    <script src="/js/vendor.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>
