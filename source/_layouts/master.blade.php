@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    @include('_partials.navbar')
+    <div id="app">
+        @include('_partials.navbar')
 
-    @yield('content')
+        @yield('content')
+    </div>
 
     <script src="/js/manifest.js"></script>
     <script src="/js/vendor.js"></script>

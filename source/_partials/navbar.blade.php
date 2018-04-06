@@ -2,13 +2,13 @@
     <div class="container">
         <div class="navbar-brand">
             <a href="/" class="navbar-item">{{ $page->site->title }}</a>
-            <div class="navbar-burger">
+            <div class="navbar-burger" :class="{ 'is-active': navbarActive }" @click="navbarActive = !navbarActive">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div><!-- .navbar-brand -->
-        <div class="navbar-menu">
+        <div class="navbar-menu" :class="{ 'is-active': navbarActive }">
             <div class="navbar-end">
                 <a href="/" class="navbar-item">Home</a>
                 <a href="/blog" class="navbar-item">Blog</a>
