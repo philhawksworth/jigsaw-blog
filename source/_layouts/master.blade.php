@@ -7,7 +7,7 @@
     <title>
         @yield('title')
         {{ !empty($__env->yieldContent('title')) ? ' | ' : '' }}
-        {{ 'Site Name' }}
+        {{ $page->site->title }}
     </title>
 
     @include('_partials.favicon')
@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h1>Parent template</h1>
+    @include('_partials.navbar')
+
     @yield('content')
 
     <script src="/js/manifest.js"></script>
