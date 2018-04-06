@@ -18,6 +18,7 @@ return [
             'path' => 'blog/{filename}',
             'extends' => '_layouts.post',
             'section' => 'postContent',
+            'sort' => '-date',
             'isPost' => true,
         ],
     ],
