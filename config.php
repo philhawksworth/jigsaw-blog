@@ -13,5 +13,17 @@ return [
     ],
     'baseUrl' => 'https://raniesantos.github.io',
     'production' => false,
-    'collections' => [],
+    'collections' => [
+        'posts' => [
+            'path' => 'blog/{filename}',
+            'extends' => '_layouts.post',
+            'section' => 'postContent',
+            'isPost' => true,
+        ],
+    ],
+    'excerpt' => function ($page, $limit = 250) {
+        return $page->isPost
+            ? str_limit(strip_tags($page->getContent()), $limit, '...')
+            : null;
+    },
 ];
