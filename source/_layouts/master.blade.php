@@ -21,6 +21,8 @@
         @include('_partials.navbar')
 
         @yield('content')
+
+        @include('_partials.footer')
     </div>
 
     <script src="/js/manifest.js"></script>

@@ -2,6 +2,7 @@ import Vue from 'vue';
 
 new Vue({
     data: {
-        navbarActive: false
+        navbarActive: false,
+        currentYear: (new Date()).getFullYear()
     }
 }).$mount('#app');

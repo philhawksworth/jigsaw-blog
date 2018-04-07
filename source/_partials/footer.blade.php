@@ -1,0 +1,8 @@
+<footer class="footer has-text-white">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>All content copyright {{ $page->site->owner->name }} &copy; <span v-text="currentYear"/>. All rights reserved.</p>
+            <p>Built with Jigsaw, hosted on GitHub Pages.</p>
+        </div>
+    </div>
+</footer>
