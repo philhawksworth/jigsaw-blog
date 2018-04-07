@@ -1,7 +1,9 @@
 @extends('_layouts.master')
 
 @section('content')
-    <section class="hero is-dark is-medium">
+    <section class="hero hero-image overlay-dark is-medium"
+        style="background-image: url(https://raniesantos.github.io/assets/img/code.jpg);"
+    >
         <div class="hero-body has-text-centered">
             <div class="container">
                 <h1 class="title">Title</h1>

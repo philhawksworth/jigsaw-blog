@@ -1,4 +1,4 @@
-<footer class="footer has-text-white">
+<footer class="footer is-primary">
     <div class="container">
         <div class="content has-text-centered">
             <p>All content copyright {{ $page->site->owner->name }} &copy; <span v-text="currentYear"/>. All rights reserved.</p>

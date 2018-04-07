@@ -1,6 +1,7 @@
 ---
 title: "Jumping into Jekyll"
 date: 2016-02-24
+image: blog.jpg
 ---
 
 Today I decided to learn how to use **Jekyll**, the blog-aware, static site generator.

@@ -1,3 +1,21 @@
-.footer {
-    background-color: #f4645f;
+@import "variables";
+
+.hero.hero-image {
+    background-size: cover;
+    background-position: center;
+
+    &.overlay-dark {
+        .title, .subtitle {
+            color: #fff;
+        }
+
+        .hero-body {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.footer.is-primary {
+    background-color: $salmon;
+    color: #fff;
 }
