@@ -15,12 +15,13 @@
         <div class="container">
 
             <h2 class="subtitle has-text-centered">Heading</h2>
-            @foreach ($posts->take(4) as $post)
-                <a href="{{ $post->getPath() }}">
-                    <h4>{{ $post->title }}</h4>
-                    <p>{{ date('M j, Y', $post->date) }}</p>
-                </a>
-            @endforeach
+            <div class="columns is-multiline">
+                @foreach ($posts->take(4) as $post)
+                    <div class="column is-one-quarter">
+                        @articleCard(compact('post'))@endarticleCard
+                    </div>
+                @endforeach
+            </div>
 
         </div>
     </section>
