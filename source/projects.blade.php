@@ -3,5 +3,11 @@
 @section('title', 'Projects')
 
 @section('content')
-    <h3>Projects page</h3>
+    <section class="section">
+        <div class="container">
+
+            <h1 class="title has-text-centered">Projects page</h1>
+
+        </div>
+    </section>
 @endsection

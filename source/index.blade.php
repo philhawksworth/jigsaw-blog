@@ -1,8 +1,25 @@
 @extends('_layouts.master')
 
 @section('content')
-    <h3>
-        <span class="fa fa-home"></span>
-        Home page
-    </h3>
+    <section class="hero is-dark is-medium">
+        <div class="hero-body has-text-centered">
+            <div class="container">
+                <h1 class="title">Title</h1>
+                <h2 class="subtitle">Subtitle</h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+
+            <h2 class="subtitle has-text-centered">Heading</h2>
+            @foreach ($posts->take(4) as $post)
+                <a href="{{ $post->getPath() }}">
+                    <h4>{{ $post->title }}</h4>
+                    <p>{{ date('M j, Y', $post->date) }}</p>
+                </a>
+            @endforeach
+
+        </div>
+    </section>
 @endsection
