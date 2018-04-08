@@ -8,6 +8,7 @@
         "watch": "npm run local -- --watch"
     },
     "devDependencies": {
+        "axios": "^0.18.0",
         "browser-sync": "^2.23.6",
         "browser-sync-webpack-plugin": "^2.0.1",
         "bulma": "^0.6.2",
@@ -18,6 +19,7 @@
         "laravel-mix": "^2.0.0",
         "node-cmd": "^3.0.0",
         "on-build-webpack": "^0.1.0",
+        "qs": "^6.5.1",
         "vee-validate": "^2.0.6",
         "vue": "^2.5.16",
         "webpack-watch": "^0.2.0",

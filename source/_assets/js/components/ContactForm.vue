@@ -1,13 +1,12 @@
 <template>
     <form @submit.prevent="onSubmitContact">
+        <input type="text" class="is-hidden" v-model="form.trapit">
+
         <div class="field">
             <label for="name" class="label">Name</label>
             <div class="control">
-                <input type="text"
-                    id="name"
-                    name="name"
-                    v-model="name"
-                    class="input"
+                <input type="text" class="input"
+                    id="name" name="name" v-model="form.name"
                     :class="{ 'is-danger': errors.has('name') }"
                     v-validate="'required|max:80'"
                 >
@@ -16,14 +15,12 @@
                 {{ errors.first('name') }}
             </p>
         </div>
+
         <div class="field">
             <label for="email" class="label">Email</label>
             <div class="control">
-                <input type="text"
-                    id="email"
-                    name="email"
-                    v-model="email"
-                    class="input"
+                <input type="text" class="input"
+                    id="email" name="email" v-model="form.email"
                     :class="{ 'is-danger': errors.has('email') }"
                     v-validate="'required|max:70|email'"
                 >
@@ -32,14 +29,12 @@
                 {{ errors.first('email') }}
             </p>
         </div>
+
         <div class="field">
             <label for="message" class="label">Message</label>
             <div class="control">
-                <textarea
-                    id="message"
-                    name="message"
-                    v-model="message"
-                    class="textarea"
+                <textarea class="textarea"
+                    id="message" name="message" v-model="form.message"
                     :class="{ 'is-danger': errors.has('message') }"
                     v-validate="'required|min:20'"
                 />
@@ -48,8 +43,9 @@
                 {{ errors.first('message') }}
             </p>
         </div>
+
         <div class="field">
-            <button class="button is-primary is-fullwidth" :disabled="errors.any()">
+            <button class="button is-primary is-fullwidth" :disabled="errors.any()" :class="{ 'is-loading': sending }">
                 Send
             </button>
         </div>
@@ -57,19 +53,41 @@
 </template>
 
 <script>
+import axios from 'axios';
+import qs from 'qs';
+
 export default {
     data () {
         return {
-            name: '',
-            email: '',
-            message: ''
+            sending: false,
+            form: {
+                trapit: '',
+                name: '',
+                email: '',
+                message: ''
+            }
         };
     },
     methods: {
         onSubmitContact () {
             this.$validator.validateAll().then((isValid) => {
                 if (isValid) {
-                    alert('submit form');
+                    this.sending = true;
+                    axios.post('https://jumprock.co/mail/raniesantos', qs.stringify({
+                        ...this.form,
+                        replyto: this.email,
+                        subject: 'Blog Contact Page'
+                    }))
+                        .then(({ data }) => {
+                            this.sending = false;
+                            if (data.status === 'success') {
+                                // clear form, show success message
+                            }
+                        })
+                        .catch((error) => {
+                            this.sending = false;
+                            console.log(error.response);
+                        });
                 }
             });
         }
