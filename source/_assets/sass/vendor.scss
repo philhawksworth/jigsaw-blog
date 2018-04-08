@@ -1,10 +1,12 @@
 @import "variables";
 
+// Bulma + Bulmaswatch
+@import "node_modules/bulmaswatch/journal/variables";
+
+$danger: $red;
 $primary: $salmon;
 $body-background-color: #eee;
 
-// Bulma + Bulmaswatch
-@import "node_modules/bulmaswatch/journal/variables";
 @import "node_modules/bulma/bulma";
 @import "node_modules/bulmaswatch/journal/overrides";
 
