@@ -1,6 +1,7 @@
 ---
 title: "Spaghetti Code and Meatballs"
 date: 2016-05-27
+image: spaghetti.jpg
 ---
 
 Who doesn't love spaghetti? I do, I hate it! But I'm not talking about your regular everyday spaghetti. I'm talking about spaghetti code.

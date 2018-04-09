@@ -1,6 +1,7 @@
 ---
 title: "Regrettable Ignorance, Part 2"
 date: 2016-02-28
+image: puzzle.jpg
 ---
 
 In [part 1](/blog/regrettable-ignorance-part-1), I shared a little bit about the issues surrounding our thesis project in college.

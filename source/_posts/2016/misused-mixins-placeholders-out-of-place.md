@@ -1,6 +1,7 @@
 ---
 title: "Misused Mixins, Placeholders out of Place"
 date: 2016-04-02
+image: confused.jpg
 ---
 
 Today I realized that I've been making a huge mistake in the way I've been using certain features of Sass.

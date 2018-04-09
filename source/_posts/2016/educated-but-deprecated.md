@@ -1,6 +1,7 @@
 ---
 title: "Educated but Deprecated"
 date: 2016-02-25
+image: class.jpg
 ---
 
 Technology changes at an extremely fast pace. One might even say that it changes every day. So shouldn't universities keep up?

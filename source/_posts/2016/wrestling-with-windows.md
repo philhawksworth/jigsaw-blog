@@ -1,6 +1,7 @@
 ---
 title: "Wrestling With Windows"
 date: 2016-04-01
+image: windows.jpg
 ---
 
 For most people, the first operating system they ever used was Windows, and that's no surprise since Windows has *completely dominated the desktop market for over 20 years*. And because of that, an overwhelming amount of software is made for Windows. It has all the programs and tools you could ever need ... or does it?

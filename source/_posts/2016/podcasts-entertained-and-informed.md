@@ -1,6 +1,7 @@
 ---
 title: "Podcasts: Entertained and Informed"
 date: 2016-06-27
+image: earbuds.jpg
 ---
 
 Several months ago, I was thinking of ways to keep myself occupied and entertained with media that I don't need to keep my eyes on.
