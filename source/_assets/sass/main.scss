@@ -1,5 +1,19 @@
 @import "variables";
 
+code {
+    background-color: transparent;
+}
+
+pre, .content pre {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: 0 0 3px #999;
+
+    code {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
 .hero.hero-image {
     background-size: cover;
     background-position: center;
