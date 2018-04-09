@@ -6,8 +6,7 @@
     >
         <div class="hero-body has-text-centered">
             <div class="container">
-                <h1 class="title">Title</h1>
-                <h2 class="subtitle">Subtitle</h2>
+                <h1 class="title">Large Shovel</h1>
             </div>
         </div>
     </section>

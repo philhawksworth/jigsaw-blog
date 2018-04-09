@@ -9,7 +9,8 @@
         </span>
         <span class="card-footer-item">
             <a href="{{ $post->getPath() }}" class="button is-primary">
-                Read more
+                <fa icon="angle-double-right"></fa>
+                <span>Read more</span>
             </a>
         </span>
     </footer>

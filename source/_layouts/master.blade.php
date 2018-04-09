@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
 </head>
 <body>
     <div id="app">
