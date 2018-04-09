@@ -1,12 +1,16 @@
-<div class="card">
+<div class="card is-fullheight">
     <header class="card-header">
         <p class="card-header-title">{{ $post->title }}</p>
     </header>
-    <div class="card-content">{{ $post->excerpt(150) }}</div>
+    <div class="card-content">{{ $post->excerpt(200) }}</div>
     <footer class="card-footer">
-        <span class="card-footer-item">{{ date('M j, Y', $post->date) }}</span>
-        <a href="{{ $post->getPath() }}" class="card-footer-item">
-            <strong>Read more</strong>
-        </a>
+        <span class="card-footer-item">
+            {{ date('M j, Y', $post->date) }}
+        </span>
+        <span class="card-footer-item">
+            <a href="{{ $post->getPath() }}" class="button is-primary">
+                Read more
+            </a>
+        </span>
     </footer>
 </div>
