@@ -44,9 +44,9 @@
             </p>
         </div>
 
-        <div class="field">
-            <button class="button is-primary is-fullwidth" :disabled="errors.any()" :class="{ 'is-loading': sending }">
-                Send
+        <div class="field has-text-centered">
+            <button class="button is-primary" :disabled="errors.any()" :class="{ 'is-loading': sending }">
+                <fa icon="send"/><span>Send me a message</span>
             </button>
         </div>
     </form>

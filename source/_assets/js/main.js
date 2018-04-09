@@ -3,6 +3,7 @@ import VeeValidate from 'vee-validate';
 import './highlight';
 
 Vue.component('contact-form', require('./components/ContactForm'));
+Vue.component('fa', require('./components/Icon'));
 
 Vue.use(VeeValidate);
 
