@@ -72,24 +72,36 @@ export default {
         onSubmitContact () {
             this.$validator.validateAll().then((isValid) => {
                 if (isValid) {
-                    this.sending = true;
-                    axios.post('https://jumprock.co/mail/raniesantos', qs.stringify({
-                        ...this.form,
-                        replyto: this.email,
-                        subject: 'Blog Contact Page'
-                    }))
-                        .then(({ data }) => {
-                            this.sending = false;
-                            if (data.status === 'success') {
-                                // clear form, show success message
-                            }
-                        })
-                        .catch((error) => {
-                            this.sending = false;
-                            console.log(error.response);
-                        });
+                    this.send();
                 }
             });
+        },
+        send () {
+            this.sending = true;
+            axios.post('https://jumprock.co/mail/raniesantos', qs.stringify({
+                ...this.form,
+                replyto: this.email,
+                subject: 'Blog Contact Page'
+            }))
+                .then(({ data }) => {
+                    this.sending = false;
+                    this[(data.status === 'success' ? 'onSuccess' : 'onError')]();
+                })
+                .catch((error) => {
+                    this.sending = false;
+                    this.onError();
+                    console.log(error.response);
+                });
+        },
+        onSuccess () {
+            this.form.name = '';
+            this.form.email = '';
+            this.form.message = '';
+            this.$validator.reset();
+            console.log('onSuccess called');
+        },
+        onError () {
+            console.log('onError called');
         }
     }
 };
