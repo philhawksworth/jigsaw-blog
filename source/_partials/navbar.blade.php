@@ -1,7 +1,11 @@
 <nav class="navbar is-primary has-shadow">
     <div class="container">
         <div class="navbar-brand">
-            <a href="/" class="navbar-item">{{ $page->site->title }}</a>
+            <a href="/" class="navbar-item">
+                {{-- temporary, change source later --}}
+                <img src="https://i.imgur.com/zftOqjL.png">
+                {{ $page->site->title }}
+            </a>
             <div class="navbar-burger" :class="{ 'is-active': navbarActive }" @click="navbarActive = !navbarActive">
                 <span></span>
                 <span></span>
