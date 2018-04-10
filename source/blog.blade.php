@@ -7,6 +7,7 @@
         <div class="container">
 
             <h1 class="title has-text-centered">Blog page</h1>
+
             @foreach ($posts as $post)
                 <a href="{{ $post->getPath() }}">
                     <h4>{{ $post->title }}</h4>
