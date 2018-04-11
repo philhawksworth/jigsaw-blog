@@ -1,15 +1,13 @@
 @extends('_layouts.master')
 
 @section('content')
-    <section class="hero hero-image overlay-dark is-medium"
-        style="background-image: url(https://raniesantos.github.io/assets/img/code.jpg);"
-    >
-        <div class="hero-body has-text-centered">
-            <div class="container">
-                <h1 class="title">Large Shovel</h1>
-            </div>
-        </div>
-    </section>
+    @hero([
+        'title' => 'Large Shovel',
+        'size' => 'medium',
+        'centered' => true,
+        'image' => 'https://raniesantos.github.io/assets/img/code.jpg',
+    ])
+    @endhero
 
     <section class="section">
         <div class="container">

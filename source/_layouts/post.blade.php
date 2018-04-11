@@ -4,15 +4,13 @@
 
 @section('content')
     @if ($page->image)
-        <section class="hero hero-image overlay-dark is-medium"
-            style="background-image: url(https://raniesantos.github.io/assets/img/post-img/{{ $page->image }});"
-        >
-            <div class="hero-body has-text-centered">
-                <div class="container">
-                    <h1 class="title">{{ $page->title }}</h1>
-                </div>
-            </div>
-        </section>
+        @hero([
+            'title' => $page->title,
+            'size' => 'medium',
+            'centered' => true,
+            'image' => "https://raniesantos.github.io/assets/img/post-img/{$page->image}",
+        ])
+        @endhero
     @endif
 
     <section class="section">
