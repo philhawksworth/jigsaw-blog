@@ -28,6 +28,8 @@
                         <hr>
                     </header>
 
+                    <post-warning date="{{ $page->date }}"></post-warning>
+
                     @yield('postContent')
                 </div>
             </div>

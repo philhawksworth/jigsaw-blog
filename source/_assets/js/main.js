@@ -4,6 +4,7 @@ import './highlight';
 
 Vue.component('contact-form', require('./components/ContactForm'));
 Vue.component('fa', require('./components/Icon'));
+Vue.component('post-warning', require('./components/PostWarning'));
 
 Vue.use(VeeValidate);
 
