@@ -98,10 +98,10 @@ export default {
             this.form.email = '';
             this.form.message = '';
             this.$validator.reset();
-            console.log('onSuccess called');
+            window.eventBus.$emit('notify', 'Your message has been sent.', 'success', 'check-circle');
         },
         onError () {
-            console.log('onError called');
+            window.eventBus.$emit('notify', 'Sending failed, please try again.', 'danger', 'times-circle');
         }
     }
 };
