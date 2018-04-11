@@ -1,0 +1,9 @@
+@import "node_modules/bulmaswatch/journal/variables";
+
+// My variables
+$salmon: #f4645f;
+
+// Variables overrides
+$primary: $salmon;
+$danger: $red;
+$body-background-color: #eee;

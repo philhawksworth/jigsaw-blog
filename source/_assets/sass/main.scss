@@ -1,4 +1,4 @@
-@import "variables";
+@import "combined-variables";
 
 code {
     background-color: transparent;
@@ -44,6 +44,10 @@ pre, .content pre {
                 color: #fff;
             }
 
+            .subtitle {
+                color: $grey-light;
+            }
+
             .hero-body {
                 background-color: rgba(0, 0, 0, 0.7);
             }
@@ -52,7 +56,7 @@ pre, .content pre {
 }
 
 .footer.is-primary {
-    background-color: $salmon;
+    background-color: $primary;
     color: #fff;
 }
 
