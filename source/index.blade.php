@@ -17,7 +17,7 @@
             <div class="columns is-multiline">
                 @foreach ($posts->take(6) as $post)
                     <div class="column is-4-widescreen is-6-desktop is-6-tablet">
-                        @articleCard(compact('post'))@endarticleCard
+                        @include('_partials.article_card')
                     </div>
                 @endforeach
             </div>

@@ -2,7 +2,9 @@
     <header class="card-header">
         <p class="card-header-title">{{ $post->title }}</p>
     </header>
-    <div class="card-content">{{ $post->excerpt(200) }}</div>
+    <div class="card-content">
+        <small>{{ $post->excerpt(200) }}</small>
+    </div>
     <footer class="card-footer">
         <span class="card-footer-item">
             {{ date('M j, Y', $post->date) }}
