@@ -20,5 +20,9 @@ Below is a list of my personal favorite tech podcasts:
 - Does Not Compute
 - Full Stack Radio
 - Laravel News Podcast
+- Linux Action News
 - Linux Unplugged
+- North Meets South Web Podcast
 - ShopTalk Show
+- Syntax
+- Twenty Percent Time
