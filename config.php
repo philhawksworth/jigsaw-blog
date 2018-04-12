@@ -5,6 +5,7 @@ return [
         'title' => 'Ranie Santos',
         'description' => 'THE SITE DESCRIPTION', // change this
         'image' => 'https://some-external-cdn.com/share.png', // change this
+        'disqusShortname' => 'raniesantos',
         'owner' => [
             'name' => 'Ranie Santos',
             'twitter' => 'https://twitter.com/raniesantos32',
@@ -20,6 +21,7 @@ return [
             'extends' => '_layouts.post',
             'section' => 'postContent',
             'isPost' => true,
+            'comments' => true,
         ],
     ],
     'excerpt' => function ($page, $limit = 250) {

@@ -26,7 +26,7 @@
                             @endif
                             <span class="has-text-primary">
                                 <fa icon="calendar-o"></fa> {{ date('F j, Y', $page->date) }}
-                                <fa icon="user-o"></fa> Ranie Santos
+                                <fa icon="user-o"></fa> {{ $page->site->owner->name }}
                             </span>
                             <hr>
                         </header>
@@ -37,6 +37,20 @@
                     </div>
 
                     @include('_partials.share')
+
+                    @if ($page->comments)
+                        <disqus
+                            shortname="{{ $page->site->disqusShortname }}"
+                            url="{{ $page->getUrl() }}"
+                            identifier="{{ $page->getFilename() }}"
+                        ></disqus>
+                    @else
+                        <article class="message has-text-centered">
+                            <div class="message-body">
+                                <fa icon="ban"></fa> Comments are not enabled for this post.
+                            </div>
+                        </article>
+                    @endif
 
                 </div>
             </div>

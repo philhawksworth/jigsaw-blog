@@ -9,6 +9,7 @@ Vue.component('contact-form', require('./components/ContactForm'));
 Vue.component('fa', require('./components/Icon'));
 Vue.component('post-warning', require('./components/PostWarning'));
 Vue.component('notification', require('./components/Notification'));
+Vue.component('disqus', require('vue-disqus'));
 
 Vue.use(VeeValidate);
 Vue.use(SocialSharing);
