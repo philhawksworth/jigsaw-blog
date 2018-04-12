@@ -15,6 +15,7 @@ mix
     .js('source/_assets/js/main.js', 'js')
     .extract([
         'vue', 'vee-validate', 'axios', 'qs',
+        'vue-social-sharing', 'vue-disqus',
         'highlight.js/lib/highlight',
         'highlight.js/lib/languages/xml',
         'highlight.js/lib/languages/css',

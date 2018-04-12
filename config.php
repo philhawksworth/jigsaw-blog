@@ -16,9 +16,9 @@ return [
     'collections' => [
         'posts' => [
             'path' => 'blog/{filename}',
+            'sort' => '-date',
             'extends' => '_layouts.post',
             'section' => 'postContent',
-            'sort' => '-date',
             'isPost' => true,
         ],
     ],

@@ -25,8 +25,8 @@
                                 <h1>{{ $page->title }}</h1>
                             @endif
                             <span class="has-text-primary">
-                                <fa icon="calendar-o"></fa>{{ date('F j, Y', $page->date) }}
-                                <fa icon="user-o"></fa>Ranie Santos
+                                <fa icon="calendar-o"></fa> {{ date('F j, Y', $page->date) }}
+                                <fa icon="user-o"></fa> Ranie Santos
                             </span>
                             <hr>
                         </header>
