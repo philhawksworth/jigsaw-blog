@@ -24,7 +24,10 @@
                             @if (!$page->image)
                                 <h1>{{ $page->title }}</h1>
                             @endif
-                            {{ date('F j, Y', $page->date) }}
+                            <span class="has-text-primary">
+                                <fa icon="calendar-o"></fa>{{ date('F j, Y', $page->date) }}
+                                <fa icon="user-o"></fa>Ranie Santos
+                            </span>
                             <hr>
                         </header>
 
@@ -32,6 +35,8 @@
 
                         @yield('postContent')
                     </div>
+
+                    @include('_partials.social_sharing')
 
                 </div>
             </div>

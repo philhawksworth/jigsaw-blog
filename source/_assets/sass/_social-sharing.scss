@@ -1,0 +1,21 @@
+[data-link^="#share-"] .button {
+    color: #fff;
+    min-width: 130px;
+    margin-bottom: 5px;
+}
+
+[data-link="#share-facebook"] .button {
+    background-color: $facebook;
+}
+
+[data-link="#share-twitter"] .button {
+    background-color: $twitter;
+}
+
+[data-link="#share-googleplus"] .button {
+    background-color: $googleplus;
+}
+
+[data-link="#share-linkedin"] .button {
+    background-color: $linkedin;
+}

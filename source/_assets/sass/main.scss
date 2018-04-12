@@ -1,71 +1,13 @@
 @import "combined-variables";
 
-code {
-    background-color: transparent;
-}
+@import "code-blocks";
 
-pre, .content pre {
-    background-color: transparent;
-    padding: 0;
-    box-shadow: 0 0 3px #999;
+@import "navbar";
 
-    code {
-        padding: 1.25rem 1.5rem;
-    }
-}
+@import "hero";
 
-.navbar-brand .navbar-item {
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    text-transform: lowercase;
+@import "footer";
 
-    img {
-        background: #fee;
-        border-radius: 5px;
-        box-shadow: 0 0 0 2px #fee;
-        margin-right: 7px;
-    }
-}
+@import "card";
 
-.hero {
-    .title {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 200;
-        font-size: 60px;
-    }
-
-    &.hero-image {
-        background-size: cover;
-        background-position: center;
-
-        &.overlay-dark {
-            .title, .subtitle {
-                color: #fff;
-            }
-
-            .subtitle {
-                color: $grey-light;
-            }
-
-            .hero-body {
-                background-color: rgba(0, 0, 0, 0.7);
-            }
-        }
-    }
-}
-
-.footer.is-primary {
-    background-color: $primary;
-    color: #fff;
-}
-
-.card.is-fullheight {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .card-content {
-        flex-grow: 1;
-    }
-}
+@import "social-sharing";

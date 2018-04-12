@@ -23,6 +23,7 @@
         "qs": "^6.5.1",
         "vee-validate": "^2.0.6",
         "vue": "^2.5.16",
+        "vue-social-sharing": "^2.3.3",
         "webpack-watch": "^0.2.0",
         "yargs": "^4.6.0"
     }
