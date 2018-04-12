@@ -36,7 +36,7 @@
                         @yield('postContent')
                     </div>
 
-                    @include('_partials.social_sharing')
+                    @include('_partials.share')
 
                 </div>
             </div>

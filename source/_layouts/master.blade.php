@@ -10,8 +10,8 @@
         {{ $page->site->title }}
     </title>
 
-    @include('_partials.meta')
-    @include('_partials.favicon')
+    @include('_partials.head.favicon')
+    @include('_partials.head.meta')
 
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
