@@ -1,7 +1,17 @@
-[data-link^="#share-"] .button {
-    color: #fff;
-    min-width: 130px;
-    margin-bottom: 5px;
+.post-header,
+.post-body,
+.post-share {
+    margin-bottom: 3rem;
+}
+
+.post-share {
+    text-align: center;
+
+    .button {
+        color: #fff;
+        min-width: 130px;
+        margin-bottom: 5px;
+    }
 }
 
 [data-link="#share-facebook"] .button {
@@ -18,4 +28,9 @@
 
 [data-link="#share-linkedin"] .button {
     background-color: $linkedin;
+}
+
+.post-comments {
+    max-width: 700px;
+    margin: 0 auto;
 }

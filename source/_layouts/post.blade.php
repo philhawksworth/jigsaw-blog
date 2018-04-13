@@ -19,8 +19,8 @@
             <div class="columns is-centered">
                 <div class="column is-9-widescreen is-10-desktop is-11-tablet">
 
-                    <div class="post content" v-pre>
-                        <header class="has-text-centered">
+                    <div class="content" v-pre>
+                        <header class="post-header has-text-centered">
                             @if (!$page->image)
                                 <h1>{{ $page->title }}</h1>
                             @endif
@@ -28,31 +28,34 @@
                                 <fa icon="calendar-o"></fa> {{ date('F j, Y', $page->date) }}
                                 <fa icon="user-o"></fa> {{ $page->site->owner->name }}
                             </span>
-                            <hr>
                         </header>
 
                         <post-warning date="{{ $page->date }}"></post-warning>
 
-                        @yield('postContent')
+                        <div class="post-body">
+                            @yield('postContent')
+                        </div>
                     </div>
 
-                    <div class="has-text-centered">
+                    <div class="post-share">
                         @include('_partials.share')
                     </div>
 
-                    @if ($page->comments)
-                        <disqus
-                            shortname="{{ $page->site->disqusShortname }}"
-                            url="{{ $page->getUrl() }}"
-                            identifier="{{ $page->getFilename() }}"
-                        ></disqus>
-                    @else
-                        <article class="message has-text-centered">
-                            <div class="message-body">
-                                <fa icon="ban"></fa> Comments are not enabled for this post.
-                            </div>
-                        </article>
-                    @endif
+                    <div class="post-comments">
+                        @if ($page->comments)
+                            <disqus
+                                shortname="{{ $page->site->disqusShortname }}"
+                                url="{{ $page->getUrl() }}"
+                                identifier="{{ $page->getFilename() }}"
+                            ></disqus>
+                        @else
+                            <article class="message has-text-centered">
+                                <div class="message-body">
+                                    <fa icon="ban"></fa> Comments are not enabled for this post.
+                                </div>
+                            </article>
+                        @endif
+                    </div>
 
                 </div>
             </div>
