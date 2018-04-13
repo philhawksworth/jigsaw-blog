@@ -1,5 +1,5 @@
 <social-sharing url="{{ $page->getUrl() }}" inline-template>
-    <div class="has-text-centered">
+    <div>
         <network network="facebook">
             <button class="button">
                 <fa icon="facebook"></fa>

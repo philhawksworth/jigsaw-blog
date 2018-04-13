@@ -13,20 +13,20 @@ If you want to use **Browsersync** with Jekyll, you may be a bit confused at fir
 ```js
 // gulpfile.js
 
-var	browserSync	= require("browser-sync").create(),
-	gulp		= require("gulp"),
-	shell		= require("gulp-shell");
+var browserSync = require("browser-sync").create();
+var gulp = require("gulp");
+var shell = require("gulp-shell");
 
 // Jekyll Build (generates files into _site)
 gulp.task("build", shell.task(["jekyll build --watch"]));
 
 // Browsersync Task (reload is triggered when files in _site are regenerated)
 gulp.task("browser-sync", function(){
-	browserSync.init({
-		server: { baseDir: "_site/" },
-		notify: false
-	});
-	gulp.watch("_site/**/*").on("change", browserSync.reload);
+    browserSync.init({
+        server: { baseDir: "_site/" },
+        notify: false
+    });
+    gulp.watch("_site/**/*").on("change", browserSync.reload);
 });
 
 // Default Task
@@ -93,8 +93,8 @@ If you placed the code in a separate file, you can then include it in your layou
 {% if site.disqus_shortname and page.comments == true %}
 <!-- this section won't appear if there is no shortname or if the post's comments are disabled -->
 <section class="comments">
-	<h4>Comments</h4>
-	{% include disqus_comments.html %} <!-- include it here -->
+    <h4>Comments</h4>
+    {% include disqus_comments.html %} <!-- include it here -->
 </section>
 {% endif %}
 ```
@@ -117,19 +117,19 @@ To add a contact form to a static site, you can use **Formspree**. You don't nee
 
 ```html
 <form id="contact-form" autocomplete="off">
-	<input type="text" name="_gotcha" style="display:none">
-	<input type="hidden" name="_subject" value="Message from your site's contact page">
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="Message from your site's contact page">
 
-	<label>Name</label>
-	<input type="text" name="name">
+    <label>Name</label>
+    <input type="text" name="name">
 
-	<label>Email</label>
-	<input type="email" name="_replyto">
+    <label>Email</label>
+    <input type="email" name="_replyto">
 
-	<label>Message</label>
-	<textarea name="message"></textarea>
+    <label>Message</label>
+    <textarea name="message"></textarea>
 
-	<input type="submit" value="Send">
+    <input type="submit" value="Send">
 </form>
 ```
 
@@ -137,11 +137,11 @@ One issue with using Formspree is that your plaintext email would be lying aroun
 
 ```js
 function getFormSubmitURL(){
-	/* btoa("your@email.com");
-	remember, you don't want to leave your email anywhere in your code
-	so don't forget to erase it later */
-	var base64_email = "eW91ckBlbWFpbC5jb20";
-	return "https://formspree.io/" + atob(base64_email);
+    /* btoa("your@email.com");
+    remember, you don't want to leave your email anywhere in your code
+    so don't forget to erase it later */
+    var base64_email = "eW91ckBlbWFpbC5jb20";
+    return "https://formspree.io/" + atob(base64_email);
 }
 ```
 
@@ -154,34 +154,34 @@ Lastly, once the form is submitted the page will be redirected to Formspree's "T
 The other solution is submitting the form through AJAX so that the user doesn't leave the page at all.
 
 ```js
-var $contactForm = $("#contact-form"),
-	$submitButton = $contactForm.find('[type="submit"]');
+var $contactForm = $("#contact-form");
+var $submitButton = $contactForm.find('[type="submit"]');
 
 $.ajax({
-	url: getFormSubmitURL(),
-	method: "POST",
-	data: $contactForm.serialize(),
-	dataType: "json",
-	beforeSend: function(){
-		/* Disable the submit button to prevent multiple submissions
-		Tell the user that the form is sending */
-		$submitButton.attr("disabled", true);
-		console.log("Sending message...");
-	},
-	success: function(data){
-		/* Enable the submit button
-		Tell the user that their message was sent
-		Clear all the form fields */
-		$submitButton.attr("disabled", false);
-		console.log("Message sent.");
-		$contactForm.trigger("reset");
-	},
-	error: function(err){
-		/* Enable the submit button
-		Tell the user that the message failed to send */
-		$submitButton.attr("disabled", false);
-		console.log("Something went wrong. Try again.");
-	}
+    url: getFormSubmitURL(),
+    method: "POST",
+    data: $contactForm.serialize(),
+    dataType: "json",
+    beforeSend: function(){
+        /* Disable the submit button to prevent multiple submissions
+        Tell the user that the form is sending */
+        $submitButton.attr("disabled", true);
+        console.log("Sending message...");
+    },
+    success: function(data){
+        /* Enable the submit button
+        Tell the user that their message was sent
+        Clear all the form fields */
+        $submitButton.attr("disabled", false);
+        console.log("Message sent.");
+        $contactForm.trigger("reset");
+    },
+    error: function(err){
+        /* Enable the submit button
+        Tell the user that the message failed to send */
+        $submitButton.attr("disabled", false);
+        console.log("Something went wrong. Try again.");
+    }
 });
 ```
 
@@ -198,34 +198,34 @@ The block of code below contains most of the necessary tags for both. Note that 
 <meta name="twitter:site" content="{{ site.owner.twitterhandle }}">
 
 {% if page.id %}
-	<!-- This block is rendered if the page is a blog post -->
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="{{ page.title }}">
-	<meta property="og:description" content="{{ page.excerpt | strip_html | strip | truncatewords:30 }}">
+    <!-- This block is rendered if the page is a blog post -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | strip | truncatewords:30 }}">
 
-	<meta name="twitter:title" content="{{ page.title }}">
-	<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | truncatewords:30 }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip | truncatewords:30 }}">
 
-	<meta name="description" content="{{ page.excerpt | strip_html | strip | truncatewords:30 }}">
-	<meta name="author" content="{{ site.owner.name }}"> <!-- change this if someone besides you writes posts -->
+    <meta name="description" content="{{ page.excerpt | strip_html | strip | truncatewords:30 }}">
+    <meta name="author" content="{{ site.owner.name }}"> <!-- change this if someone besides you writes posts -->
 {% else %}
-	<!-- This block is rendered for all other pages of the site -->
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{ site.title }}">
-	<meta property="og:description" content="{{ site.description }}">
+    <!-- This block is rendered for all other pages of the site -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
 
-	<meta name="twitter:title" content="{{ site.title }}">
-	<meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
 
-	<meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ site.description }}">
 {% endif %}
 
 {% if page.image %}
-	<meta property="og:image" content="{{ site.url }}/assets/img/post-img/{{ page.image }}">
-	<meta name="twitter:image:src" content="{{ site.url }}/assets/img/post-img/{{ page.image }}">
+    <meta property="og:image" content="{{ site.url }}/assets/img/post-img/{{ page.image }}">
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/post-img/{{ page.image }}">
 {% else %}
-	<meta property="og:image" content="{{ site.url }}/assets/img/image.png">
-	<meta name="twitter:image:src" content="{{ site.url }}/assets/img/image.png">
+    <meta property="og:image" content="{{ site.url }}/assets/img/image.png">
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/image.png">
 {% endif %}
 ```
 
@@ -237,16 +237,16 @@ Now that your pages display nicely when they're shared, you should also make the
 
 ```html
 <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-	onclick="window.open(this.href, 'facebook-share','width=580,height=610');return false;" title="Share on Facebook">
-	Facebook
+    onclick="window.open(this.href, 'facebook-share','width=580,height=610');return false;" title="Share on Facebook">
+    Facebook
 </a>
 <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}"
-	onclick="window.open(this.href, 'twitter-share', 'width=550,height=260');return false;" title="Share on Twitter">
-	Twitter
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=260');return false;" title="Share on Twitter">
+    Twitter
 </a>
 <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
-	onclick="window.open(this.href, 'google-plus-share', 'width=490,height=600');return false;" title="Share on Google+">
-	Google+
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=600');return false;" title="Share on Google+">
+    Google+
 </a>
 ```
 

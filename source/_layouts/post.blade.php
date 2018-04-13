@@ -36,7 +36,9 @@
                         @yield('postContent')
                     </div>
 
-                    @include('_partials.share')
+                    <div class="has-text-centered">
+                        @include('_partials.share')
+                    </div>
 
                     @if ($page->comments)
                         <disqus

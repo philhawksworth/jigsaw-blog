@@ -33,23 +33,23 @@ So I decided to go to CodePen to test it just to be sure.
 ```scss
 // code that would be in the placeholders file
 %placeholder {
-  font-weight: bold;
-  font-family: sans-serif;
-  font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
 }
 
 // code that would be in the resets file
 h1, h2, h3, h4, h5, h6 {
-	font: inherit;
+    font: inherit;
 }
 
 // code that would be in the defaults file
 h1 {
-	@extend %placeholder;
+    @extend %placeholder;
 }
 
 article header {
-  @extend %placeholder;
+    @extend %placeholder;
 }
 ```
 
@@ -57,19 +57,19 @@ I was expecting the output to turn out like this:
 
 ```scss
 h1, h2, h3, h4, h5, h6 {
-  font: inherit;
+    font: inherit;
 }
 
 h1 {
-  font-weight: bold;
-  font-family: sans-serif;
-  font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
 }
 
 article header {
-  font-weight: bold;
-  font-family: sans-serif;
-  font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
 }
 ```
 
@@ -77,13 +77,13 @@ What I actually got was this:
 
 ```scss
 h1, article header {
-  font-weight: bold;
-  font-family: sans-serif;
-  font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font: inherit;
+    font: inherit;
 }
 ```
 
