@@ -7,7 +7,7 @@
         <div class="container">
 
             <div class="columns is-centered">
-                <div class="column is-6-widescreen is-7-desktop is-7-tablet">
+                <div class="column is-6-widescreen is-7-tablet">
                     <notification></notification>
 
                     <h1 class="title has-text-centered">Contact page</h1>
