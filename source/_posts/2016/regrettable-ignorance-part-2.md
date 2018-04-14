@@ -1,6 +1,7 @@
 ---
 title: "Regrettable Ignorance, Part 2"
 date: 2016-02-28
+tags: ["git"]
 image: puzzle.jpg
 ---
 

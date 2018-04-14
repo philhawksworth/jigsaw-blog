@@ -1,6 +1,7 @@
 ---
 title: "Jumping into Jekyll"
 date: 2016-02-24
+tags: ["static-sites"]
 image: blog.jpg
 ---
 

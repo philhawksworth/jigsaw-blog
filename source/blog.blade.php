@@ -6,14 +6,35 @@
     <section class="section">
         <div class="container">
 
-            <h1 class="title has-text-centered">Blog page</h1>
+            <h1 class="title has-text-centered">Blog</h1>
 
-            @foreach ($posts as $post)
-                <a href="{{ $post->getPath() }}">
-                    <h4>{{ $post->title }}</h4>
-                    <p>{{ date('M j, Y', $post->date) }}</p>
-                </a>
-            @endforeach
+            <div class="columns">
+                <div class="column is-4-tablet is-3-desktop">
+
+                    <div class="box">
+                        <h2 class="subtitle">Tags</h2>
+                        <div class="tags">
+                            @foreach ($page->allTags($posts) as $tag)
+                                <a href="/blog/tags/{{ $tag }}" class="tag is-primary">
+                                    {{ $tag }}
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column">
+
+                    <div class="columns is-multiline">
+                        @foreach ($posts as $post)
+                            <div class="column is-6">
+                                @post(compact('post'))@endpost
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </section>

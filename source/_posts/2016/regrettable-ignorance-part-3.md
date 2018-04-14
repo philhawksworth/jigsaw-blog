@@ -1,6 +1,7 @@
 ---
 title: "Regrettable Ignorance, Part 3"
 date: 2016-03-05
+tags: ["css", "laravel"]
 image: gears.jpg
 ---
 

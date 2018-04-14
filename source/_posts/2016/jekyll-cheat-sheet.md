@@ -1,6 +1,7 @@
 ---
 title: "Jekyll Cheat Sheet"
 date: 2016-04-06
+tags: ["static-sites"]
 image: checklist.jpg
 ---
 

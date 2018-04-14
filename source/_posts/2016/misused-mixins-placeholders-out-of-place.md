@@ -1,6 +1,7 @@
 ---
 title: "Misused Mixins, Placeholders out of Place"
 date: 2016-04-02
+tags: ["css"]
 image: confused.jpg
 ---
 
