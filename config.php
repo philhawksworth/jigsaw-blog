@@ -3,7 +3,7 @@
 return [
     'site' => [
         'title' => 'Ranie Santos',
-        'description' => 'THE SITE DESCRIPTION', // change this
+        'description' => 'Personal blog of Ranie Santos. Laravel fanboy, code linting zealot, podcast junkie, lives in Linux',
         'image' => 'https://some-external-cdn.com/share.png', // change this
         'disqusShortname' => 'raniesantos',
         'owner' => [
