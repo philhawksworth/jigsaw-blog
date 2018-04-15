@@ -9,10 +9,14 @@
 >
     <div class="hero-body{{ isset($centered) ? ' has-text-centered' : '' }}">
         <div class="container">
-            <h1 class="title">{{ $title }}</h1>
-            @if (isset($subtitle))
-                <h2 class="subtitle">{{ $subtitle }}</h2>
-            @endif
+            <div class="columns is-centered">
+                <div class="column is-9-widescreen is-10-desktop is-11-tablet">
+                    <h1 class="title">{{ $title }}</h1>
+                    @if (isset($subtitle))
+                        <h2 class="subtitle">{{ $subtitle }}</h2>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
 </section>
