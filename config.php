@@ -12,7 +12,7 @@ return [
             'github' => 'https://github.com/raniesantos',
         ],
     ],
-    'baseUrl' => 'https://raniesantos.github.io',
+    'baseUrl' => 'https://raniesantos.netlify.com',
     'production' => false,
     'collections' => [
         'posts' => [
