@@ -41,4 +41,9 @@ return [
             return in_array($tag, $post->tags);
         });
     },
+    'countPostsWithTag' => function ($page, $posts, $tag) {
+        return $posts->reduce(function ($carry, $post) use ($tag) {
+            return $carry + (int) in_array($tag, $post->tags);
+        });
+    },
 ];

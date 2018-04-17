@@ -16,7 +16,7 @@
                         <div class="tags">
                             @foreach ($page->allTags($posts) as $tag)
                                 <a href="/blog/tags/{{ $tag }}" class="tag is-primary">
-                                    {{ $tag }}
+                                    {{ $tag }} ({{ $page->countPostsWithTag($posts, $tag) }})
                                 </a>
                             @endforeach
                         </div>
