@@ -8,9 +8,14 @@
 
             <h1 class="title has-text-centered">Posts tagged '{{ $page->getFilename() }}'</h1>
 
-            @foreach ($page->filterByTag($posts, $page->getFilename()) as $post)
-                @post(compact('post'))@endpost
-            @endforeach
+            <div class="columns is-centered">
+                <div class="column is-8-tablet is-9-desktop">
+
+                    @postlist(['posts' => $page->filterByTag($posts, $page->getFilename())])
+                    @endpostlist
+
+                </div>
+            </div>
 
         </div>
     </section>

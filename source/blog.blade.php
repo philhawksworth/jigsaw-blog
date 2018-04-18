@@ -25,13 +25,8 @@
                 </div>
                 <div class="column">
 
-                    <div class="columns is-multiline">
-                        @foreach ($posts as $post)
-                            <div class="column is-6">
-                                @post(compact('post'))@endpost
-                            </div>
-                        @endforeach
-                    </div>
+                    @postlist(compact('posts'))
+                    @endpostlist
 
                 </div>
             </div>
