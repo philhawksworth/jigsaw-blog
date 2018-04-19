@@ -27,6 +27,7 @@ return [
         'tags' => [
             'path' => 'blog/tags/{filename}',
         ],
+        'projects' => [],
     ],
     'excerpt' => function ($page, $limit = 250) {
         return $page->isPost
