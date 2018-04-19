@@ -4,7 +4,7 @@ return [
     'site' => [
         'title' => 'Ranie Santos',
         'description' => 'Personal blog of Ranie Santos. Laravel fanboy, code linting zealot, podcast junkie, lives in Linux',
-        'image' => 'https://some-external-cdn.com/share.png', // change this
+        'image' => 'default-share.png',
         'disqusShortname' => 'raniesantos',
         'owner' => [
             'name' => 'Ranie Santos',
@@ -47,5 +47,8 @@ return [
         return $posts->reduce(function ($carry, $post) use ($tag) {
             return $carry + (int) collect($post->tags)->contains($tag);
         });
+    },
+    'cdnPath' => function ($page, $path) {
+        return 'https://raniesantos.sirv.com/blog/' . $path;
     },
 ];

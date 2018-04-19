@@ -2,8 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a href="/" class="navbar-item">
-                {{-- temporary, change source later --}}
-                <img src="https://i.imgur.com/zftOqjL.png">
+                <img src="{{ $page->cdnPath('logo-160.png') }}">
                 {{ $page->site->title }}
             </a>
             <div class="navbar-burger" :class="{ 'is-active': navbarActive }" @click="navbarActive = !navbarActive">

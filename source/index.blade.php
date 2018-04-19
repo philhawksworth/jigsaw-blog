@@ -5,7 +5,7 @@
         'title' => 'Large Shovel',
         'size' => 'medium',
         'centered' => true,
-        'image' => 'https://raniesantos.github.io/assets/img/code.jpg',
+        'image' => $page->cdnPath('code.jpg'),
     ])
     @endhero
 

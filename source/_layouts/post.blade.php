@@ -8,7 +8,7 @@
             'title' => $page->title,
             'size' => 'medium',
             'centered' => true,
-            'image' => "https://raniesantos.github.io/assets/img/post-img/{$page->image}",
+            'image' => $page->cdnPath("posts/{$page->image}"),
         ])
         @endhero
     @endif
