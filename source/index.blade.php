@@ -17,7 +17,23 @@
             <div class="columns is-multiline">
                 @foreach ($posts->take(6) as $post)
                     <div class="column is-4-widescreen is-6-tablet">
-                        @include('_partials.article_card')
+
+                        @card(['title' => $post->title])
+                            <small>{{ $post->excerpt(200) }}</small>
+
+                            @slot('footer')
+                                <span class="card-footer-item">
+                                    {{ date('M j, Y', $post->date) }}
+                                </span>
+                                <span class="card-footer-item">
+                                    <a href="{{ $post->getPath() }}" class="button is-primary">
+                                        <fa icon="angle-double-right"></fa>
+                                        <span>Read more</span>
+                                    </a>
+                                </span>
+                            @endslot
+                        @endcard
+
                     </div>
                 @endforeach
             </div>
