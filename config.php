@@ -38,12 +38,12 @@ return [
     },
     'filterByTag' => function ($page, $posts, $tag) {
         return $posts->filter(function ($post) use ($tag) {
-            return in_array($tag, $post->tags);
+            return collect($post->tags)->contains($tag);
         });
     },
     'countPostsWithTag' => function ($page, $posts, $tag) {
         return $posts->reduce(function ($carry, $post) use ($tag) {
-            return $carry + (int) in_array($tag, $post->tags);
+            return $carry + (int) collect($post->tags)->contains($tag);
         });
     },
 ];
