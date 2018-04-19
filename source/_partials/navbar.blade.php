@@ -26,6 +26,9 @@
                 <a href="/projects" class="navbar-item">
                     Projects
                 </a>
+                <a href="{{ $page->site->owner->resume }}" target="_blank" class="navbar-item">
+                    Resume
+                </a>
                 <a href="/contact" class="navbar-item">
                     Contact
                 </a>

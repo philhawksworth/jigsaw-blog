@@ -10,6 +10,7 @@ return [
             'name' => 'Ranie Santos',
             'twitter' => 'https://twitter.com/raniesantos32',
             'github' => 'https://github.com/raniesantos',
+            'resume' => 'https://drive.google.com/file/d/0BxTkFtINjLyIYUFRQUxScUt0cXc/view?usp=sharing',
         ],
     ],
     'baseUrl' => 'https://raniesantos.netlify.com',
