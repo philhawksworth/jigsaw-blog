@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="onSubmitContact">
+    <form @submit.prevent="onSubmitContact" autocomplete="off">
         <input type="text" class="is-hidden" v-model="form.trapit">
 
         <div class="field">
