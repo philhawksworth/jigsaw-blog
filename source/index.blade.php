@@ -19,7 +19,7 @@
                     <div class="column is-4-widescreen is-6-tablet">
 
                         @card(['title' => $post->title])
-                            <small>{{ $post->excerpt(200) }}</small>
+                            <small>{!! $post->excerpt(200) !!}</small>
 
                             @slot('footer')
                                 <span class="card-footer-item">
