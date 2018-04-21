@@ -2,7 +2,7 @@
 
 @section('content')
     @hero([
-        'title' => 'Large Shovel',
+        'title' => 'Anecdotes of an Artisan',
         'size' => 'medium',
         'centered' => true,
         'image' => $page->cdnPath('code.jpg'),
