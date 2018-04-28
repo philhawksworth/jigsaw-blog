@@ -1,15 +1,18 @@
 @import "combined-variables";
 
 @import "base";
-
-@import "navbar";
-
-@import "hero";
-
-@import "footer";
-
 @import "columns";
 
-@import "card";
+// Layout
+@import "hero";
+@import "footer";
 
+// Elements
+@import "content";
+
+// Components
+@import "card";
+@import "navbar";
+
+// Custom
 @import "post";

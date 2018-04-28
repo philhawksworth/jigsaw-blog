@@ -11,6 +11,13 @@
             <div class="columns is-centered">
                 <div class="column is-8-tablet is-9-desktop">
 
+                    <div class="field">
+                        <a href="/blog" class="button">
+                            <fa icon="angle-double-left"></fa>
+                            <span>Blog index</span>
+                        </a>
+                    </div>
+
                     @postlist(['posts' => $page->filterByTag($posts, $page->getFilename())])
                     @endpostlist
 

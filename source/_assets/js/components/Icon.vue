@@ -1,6 +1,10 @@
 <template>
-    <span class="icon">
-        <i :class="`fa fa-${icon}`"/>
+    <span class="icon" :class="{ 'is-large': stack }">
+        <span v-if="stack" class="fa-stack fa-lg">
+            <i :class="[`fa fa-stack-2x fa-${stack}`, stackClass]"/>
+            <i :class="[`fa fa-stack-1x fa-${icon}`, iconClass]"/>
+        </span>
+        <i v-else :class="[`fa fa-${icon}`, iconClass]"/>
     </span>
 </template>
 
@@ -10,6 +14,18 @@ export default {
         icon: {
             type: String,
             required: true
+        },
+        iconClass: {
+            type: String,
+            default: ''
+        },
+        stack: {
+            type: String,
+            default: ''
+        },
+        stackClass: {
+            type: String,
+            default: ''
         }
     }
 };
