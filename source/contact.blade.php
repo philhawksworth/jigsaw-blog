@@ -3,19 +3,13 @@
 @section('title', 'Contact')
 
 @section('content')
-    <section class="section">
-        <div class="container">
+    <div class="columns is-centered">
+        <div class="column is-6-widescreen is-7-tablet">
+            <notification></notification>
 
-            <div class="columns is-centered">
-                <div class="column is-6-widescreen is-7-tablet">
-                    <notification></notification>
+            <h1 class="title has-text-centered">Contact</h1>
 
-                    <h1 class="title has-text-centered">Contact</h1>
-
-                    <contact-form/>
-                </div>
-            </div>
-
+            <contact-form/>
         </div>
-    </section>
+    </div>
 @endsection

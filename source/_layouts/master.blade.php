@@ -21,7 +21,13 @@
     <div id="app">
         @include('_partials.navbar')
 
-        @yield('content')
+        @yield('hero')
+
+        <section class="section" id="main">
+            <div class="container">
+                @yield('content')
+            </div>
+        </section>
 
         @include('_partials.footer')
     </div>
