@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VeeValidate from 'vee-validate';
 import SocialSharing from 'vue-social-sharing';
+import VueDisqus from 'vue-disqus';
 import './highlight';
 
 window.eventBus = new Vue();
@@ -9,10 +10,10 @@ Vue.component('contact-form', require('./components/ContactForm'));
 Vue.component('fa', require('./components/Icon'));
 Vue.component('post-warning', require('./components/PostWarning'));
 Vue.component('notification', require('./components/Notification'));
-Vue.component('disqus', require('vue-disqus'));
 
 Vue.use(VeeValidate);
 Vue.use(SocialSharing);
+Vue.use(VueDisqus);
 
 new Vue({
     data: {

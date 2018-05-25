@@ -4,6 +4,7 @@ date: 2016-02-24
 tags:
   - static-sites
 image: blog.jpg
+comments: true
 ---
 Today I decided to learn how to use **Jekyll**, the blog-aware, static site generator.
 

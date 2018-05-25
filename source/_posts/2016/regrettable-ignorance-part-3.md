@@ -5,6 +5,7 @@ tags:
   - css
   - laravel
 image: gears.jpg
+comments: true
 ---
 If you're building a vehicle and you need to finish it as fast as possible or within a deadline, you wouldn't need to build every single component from scratch right? As the saying goes, *"Don't reinvent the wheel."* But what if you didn't even know the wheel already existed at the time?
 
