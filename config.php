@@ -6,6 +6,7 @@ return [
         'description' => 'Personal blog of Ranie Santos. Laravel fanboy, code linting zealot, podcast junkie, lives in Linux',
         'image' => 'default-share.png',
         'disqusShortname' => 'raniesantos',
+        'analyticsId' => 'UA-118355516-1',
         'owner' => [
             'name' => 'Ranie Santos',
             'twitter' => 'https://twitter.com/raniesantos32',
