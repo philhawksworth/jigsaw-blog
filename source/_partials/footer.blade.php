@@ -6,11 +6,14 @@
                 <p>Built with Jigsaw, hosted on Netlify.</p>
             </div>
             <div class="column is-3 has-text-right-tablet">
-                <a href="{{ $page->site->owner->twitter }}" target="_blank">
+                <a href="https://twitter.com/{{ $page->site->owner->twitter }}" target="_blank">
                     <fa icon="twitter" stack="square" icon-class="has-text-primary" stack-class="has-text-white"></fa>
                 </a>
-                <a href="{{ $page->site->owner->github }}" target="_blank">
+                <a href="https://github.com/{{ $page->site->owner->github }}" target="_blank">
                     <fa icon="github" stack="square" icon-class="has-text-primary" stack-class="has-text-white"></fa>
+                </a>
+                <a href="https://gitlab.com/{{ $page->site->owner->gitlab }}" target="_blank">
+                    <fa icon="gitlab" stack="square" icon-class="has-text-primary" stack-class="has-text-white"></fa>
                 </a>
             </div>
         </div>

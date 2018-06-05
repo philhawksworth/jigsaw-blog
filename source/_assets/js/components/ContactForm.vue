@@ -58,6 +58,12 @@ import axios from 'axios';
 import qs from 'qs';
 
 export default {
+    props: {
+        jumprockAlias: {
+            type: String,
+            required: true
+        }
+    },
     data () {
         return {
             sending: false,
@@ -79,7 +85,7 @@ export default {
         },
         send () {
             this.sending = true;
-            axios.post('https://jumprock.co/mail/raniesantos', qs.stringify({
+            axios.post(`https://jumprock.co/mail/${this.jumprockAlias}`, qs.stringify({
                 ...this.form,
                 replyto: this.email,
                 subject: 'Blog Contact Page'

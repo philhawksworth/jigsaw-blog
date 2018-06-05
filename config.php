@@ -6,11 +6,13 @@ return [
         'description' => 'Personal blog of Ranie Santos. Laravel fanboy, code linting zealot, podcast junkie, lives in Linux',
         'image' => 'default-share.png',
         'disqusShortname' => 'raniesantos',
+        'jumprockAlias' => 'raniesantos',
         'analyticsId' => 'UA-118355516-1',
         'owner' => [
             'name' => 'Ranie Santos',
-            'twitter' => 'https://twitter.com/raniesantos32',
-            'github' => 'https://github.com/raniesantos',
+            'twitter' => 'raniesantos32',
+            'github' => 'raniesantos',
+            'gitlab' => 'raniesantos',
             'resume' => 'https://drive.google.com/file/d/0BxTkFtINjLyIYUFRQUxScUt0cXc/view?usp=sharing',
         ],
     ],
@@ -50,6 +52,6 @@ return [
         });
     },
     'cdnPath' => function ($page, $path) {
-        return 'https://raniesantos.sirv.com/blog/' . $path;
+        return 'https://raniesantos-cdn.sirv.com/blog/' . $path;
     },
 ];
