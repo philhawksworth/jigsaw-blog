@@ -2,7 +2,7 @@ let mix = require('laravel-mix');
 let build = require('./tasks/build.js');
 
 mix.disableSuccessNotifications();
-mix.setPublicPath('source/');
+mix.setPublicPath('source');
 mix.webpackConfig({
     plugins: [
         build.jigsaw,

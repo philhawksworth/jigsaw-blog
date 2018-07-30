@@ -13,8 +13,8 @@
     @include('_partials.head.favicon')
     @include('_partials.head.meta')
 
-    <link rel="stylesheet" href="/css/vendor.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ mix('css/vendor.css', '') }}">
+    <link rel="stylesheet" href="{{ mix('css/main.css', '') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300">
 </head>
 <body>
@@ -33,9 +33,9 @@
     </div>
 
     @includeWhen($page->production, '_partials.analytics')
-    <script src="/js/manifest.js"></script>
-    <script src="/js/vendor.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="{{ mix('js/manifest.js', '') }}"></script>
+    <script src="{{ mix('js/vendor.js', '') }}"></script>
+    <script src="{{ mix('js/main.js', '') }}"></script>
     @stack('scripts')
 </body>
 </html>
