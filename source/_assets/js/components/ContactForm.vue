@@ -2,47 +2,37 @@
     <form @submit.prevent="onSubmitContact" autocomplete="off">
         <input type="text" class="is-hidden" v-model="form.trapit">
 
-        <div class="field">
-            <label for="name" class="label">Name</label>
-            <div class="control">
-                <input type="text" class="input"
-                    id="name" name="name" v-model="form.name"
-                    :class="{ 'is-danger': errors.has('name') }"
-                    v-validate="'required|max:80'"
-                >
-            </div>
-            <p v-show="errors.has('name')" class="help is-danger">
-                {{ errors.first('name') }}
-            </p>
-        </div>
+        <field label="Name" :error="errors.first('name')">
+            <input type="text" class="input"
+                id="name" name="name" v-model="form.name"
+                :class="{ 'is-danger': errors.has('name') }"
+                v-validate="'required|max:80'"
+            >
+        </field>
 
-        <div class="field">
-            <label for="email" class="label">Email</label>
-            <div class="control">
-                <input type="text" class="input"
-                    id="email" name="email" v-model="form.email"
-                    :class="{ 'is-danger': errors.has('email') }"
-                    v-validate="'required|max:70|email'"
-                >
-            </div>
-            <p v-show="errors.has('email')" class="help is-danger">
-                {{ errors.first('email') }}
-            </p>
-        </div>
+        <field label="Email" :error="errors.first('email')">
+            <input type="text" class="input"
+                id="email" name="email" v-model="form.email"
+                :class="{ 'is-danger': errors.has('email') }"
+                v-validate="'required|max:70|email'"
+            >
+        </field>
 
-        <div class="field">
-            <label for="message" class="label">Message</label>
-            <div class="control">
-                <textarea class="textarea"
-                    id="message" name="message" v-model="form.message"
-                    :class="{ 'is-danger': errors.has('message') }"
-                    v-validate="'required|min:20'"
-                />
-            </div>
-            <p v-show="errors.has('message')" class="help is-danger">
-                {{ errors.first('message') }}
-            </p>
-        </div>
+        <field label="Subject (optional)" label-for="subject" :error="errors.first('subject')">
+            <input type="text" class="input"
+                id="subject" name="subject" v-model="form.subject"
+                :class="{ 'is-danger': errors.has('subject') }"
+                v-validate="'max:60'"
+            >
+        </field>
+
+        <field label="Message" :error="errors.first('message')">
+            <textarea class="textarea"
+                id="message" name="message" v-model="form.message"
+                :class="{ 'is-danger': errors.has('message') }"
+                v-validate="'required|min:20'"
+            />
+        </field>
 
         <div class="field has-text-centered">
             <button class="button is-primary" :disabled="errors.any()" :class="{ 'is-loading': sending }">
@@ -71,25 +61,24 @@ export default {
                 trapit: '',
                 name: '',
                 email: '',
-                message: ''
+                subject: '',
+                message: '',
+                replyto: '%email'
             }
         };
     },
     methods: {
         onSubmitContact () {
             this.$validator.validateAll().then((isValid) => {
-                if (isValid) {
-                    this.send();
-                }
+                if (isValid) this.send();
             });
         },
         send () {
             this.sending = true;
-            axios.post(`https://jumprock.co/mail/${this.jumprockAlias}`, qs.stringify({
-                ...this.form,
-                replyto: this.email,
-                subject: 'Blog Contact Page'
-            }))
+            const form = { ...this.form };
+            form.subject = '[Blog Contact Page] ' + form.subject;
+
+            axios.post(`https://jumprock.co/mail/${this.jumprockAlias}`, qs.stringify({ ...form }))
                 .then(({ data }) => {
                     this.sending = false;
                     this[(data.status === 'success' ? 'onSuccess' : 'onError')]();
@@ -103,6 +92,7 @@ export default {
         onSuccess () {
             this.form.name = '';
             this.form.email = '';
+            this.form.subject = '';
             this.form.message = '';
             this.$validator.reset();
             window.eventBus.$emit('notify', 'Your message has been sent.', 'success', 'check-circle');
