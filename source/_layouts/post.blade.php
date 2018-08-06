@@ -24,8 +24,8 @@
                         <h1>{{ $page->title }}</h1>
                     @endif
                     <span class="has-text-primary">
-                        <fa icon="calendar-o"></fa> {{ date('F j, Y', $page->date) }}
-                        <fa icon="user-o"></fa> {{ $page->site->owner->name }}
+                        <icon>calendar-o</icon> {{ date('F j, Y', $page->date) }}
+                        <icon>user-o</icon> {{ $page->site->owner->name }}
                     </span>
                 </header>
 
@@ -50,7 +50,7 @@
                 @else
                     <article class="message has-text-centered">
                         <div class="message-body">
-                            <fa icon="ban"></fa> Comments are not enabled for this post.
+                            <icon>ban</icon> Comments are not enabled for this post.
                         </div>
                     </article>
                 @endif

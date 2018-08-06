@@ -7,7 +7,7 @@ import './highlight';
 window.eventBus = new Vue();
 
 Vue.component('contact-form', require('./components/ContactForm'));
-Vue.component('fa', require('./components/Icon'));
+Vue.component('icon', require('./components/Icon'));
 Vue.component('post-warning', require('./components/PostWarning'));
 Vue.component('notification', require('./components/Notification'));
 Vue.component('field', require('./components/Field'));

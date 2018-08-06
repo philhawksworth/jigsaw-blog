@@ -1,7 +1,7 @@
 <template>
     <div v-if="message" :class="`notification is-${type}`">
         <button class="delete" @click="message = ''"/>
-        <fa v-if="icon" :icon="icon"/>
+        <icon v-if="icon">{{ icon }}</icon>
         {{ message }}
     </div>
 </template>

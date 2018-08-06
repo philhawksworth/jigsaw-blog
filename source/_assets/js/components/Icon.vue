@@ -11,10 +11,6 @@
 <script>
 export default {
     props: {
-        icon: {
-            type: String,
-            required: true
-        },
         iconClass: {
             type: String,
             default: ''
@@ -27,6 +23,11 @@ export default {
             type: String,
             default: ''
         }
+    },
+    data () {
+        return {
+            icon: this.$slots.default[0].text
+        };
     }
 };
 </script>

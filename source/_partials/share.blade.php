@@ -2,25 +2,25 @@
     <div>
         <network network="facebook">
             <button class="button">
-                <fa icon="facebook"></fa>
+                <icon>facebook</icon>
                 <span>Facebook</span>
             </button>
         </network>
         <network network="twitter">
             <button class="button">
-                <fa icon="twitter"></fa>
+                <icon>twitter</icon>
                 <span>Twitter</span>
             </button>
         </network>
         <network network="googleplus">
             <button class="button">
-                <fa icon="google-plus"></fa>
+                <icon>google-plus</icon>
                 <span>Google +</span>
             </button>
         </network>
         <network network="linkedin">
             <button class="button">
-                <fa icon="linkedin"></fa>
+                <icon>linkedin</icon>
                 <span>LinkedIn</span>
             </button>
         </network>

@@ -32,10 +32,9 @@
         @include('_partials.footer')
     </div>
 
-    @includeWhen($page->production, '_partials.analytics')
     <script src="{{ mix('js/manifest.js', '') }}"></script>
     <script src="{{ mix('js/vendor.js', '') }}"></script>
     <script src="{{ mix('js/main.js', '') }}"></script>
-    @stack('scripts')
+    @includeWhen($page->production, '_partials.analytics')
 </body>
 </html>

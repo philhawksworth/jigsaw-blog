@@ -14,28 +14,22 @@
         <div class="navbar-menu" :class="{ 'is-active': navbarActive }">
             <div class="navbar-end">
                 <a href="/" class="navbar-item">
-                    <fa icon="home"></fa>
-                    Home
+                    <icon>home</icon> Home
                 </a>
                 <a href="/blog" class="navbar-item">
-                    <fa icon="pencil"></fa>
-                    Blog
+                    <icon>pencil</icon> Blog
                 </a>
                 <a href="/about" class="navbar-item">
-                    <fa icon="user"></fa>
-                    About
+                    <icon>user</icon> About
                 </a>
                 <a href="/projects" class="navbar-item">
-                    <fa icon="code"></fa>
-                    Projects
+                    <icon>code</icon> Projects
                 </a>
                 <a href="/resume" class="navbar-item">
-                    <fa icon="file-text"></fa>
-                    Resume
+                    <icon>file-text</icon> Resume
                 </a>
                 <a href="/contact" class="navbar-item">
-                    <fa icon="envelope"></fa>
-                    Contact
+                    <icon>envelope</icon> Contact
                 </a>
             </div>
         </div><!-- .navbar-menu -->
