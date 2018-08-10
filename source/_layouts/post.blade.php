@@ -8,7 +8,7 @@
             'title' => $page->title,
             'size' => 'medium',
             'centered' => true,
-            'image' => $page->cdnPath("posts/{$page->image}"),
+            'image' => $page->imageCdn("posts/{$page->image}"),
         ])
         @endhero
     @endif

@@ -51,7 +51,7 @@ return [
             return $carry + (int) collect($post->tags)->contains($tag);
         });
     },
-    'cdnPath' => function ($page, $path) {
+    'imageCdn' => function ($page, $path) {
         return 'https://raniesantos-cdn.sirv.com/blog/' . $path;
     },
 ];

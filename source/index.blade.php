@@ -5,7 +5,7 @@
         'title' => 'Anecdotes of an Artisan',
         'size' => 'medium',
         'centered' => true,
-        'image' => $page->cdnPath('code.jpg'),
+        'image' => $page->imageCdn('code.jpg'),
     ])
     @endhero
 @endsection
