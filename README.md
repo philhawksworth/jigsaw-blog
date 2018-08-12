@@ -5,7 +5,7 @@ Listed below are some details about this blog that other people building static 
 - Static site generator: [Jigsaw](http://jigsaw.tighten.co)
 - Hosting: [Netlify](https://www.netlify.com)
 - Favicons generated via [RealFaviconGenerator](https://realfavicongenerator.net)
-- Image hosting: [Sirv](https://sirv.com)
+- Image hosting: [Cloudinary](https://cloudinary.com)
 - Has Google Analytics
 
 ## Posts

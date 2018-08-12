@@ -52,6 +52,6 @@ return [
         });
     },
     'imageCdn' => function ($page, $path) {
-        return 'https://raniesantos-cdn.sirv.com/blog/' . $path;
+        return 'https://res.cloudinary.com/raniesantos/image/upload/blog/' . $path;
     },
 ];
