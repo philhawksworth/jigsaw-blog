@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'production' => false,
+    'baseUrl' => 'https://raniesantos.netlify.com',
     'site' => [
         'title' => 'Ranie Santos',
         'description' => 'Personal blog of Ranie Santos. Laravel fanboy, code linting zealot, podcast junkie, lives in Linux',
@@ -8,16 +10,14 @@ return [
         'disqusShortname' => 'raniesantos',
         'jumprockAlias' => 'raniesantos',
         'analyticsId' => 'UA-118355516-1',
-        'owner' => [
-            'name' => 'Ranie Santos',
-            'twitter' => 'raniesantos32',
-            'github' => 'raniesantos',
-            'gitlab' => 'raniesantos',
-            'resume' => 'https://drive.google.com/file/d/0BxTkFtINjLyIYUFRQUxScUt0cXc/view?usp=sharing',
-        ],
     ],
-    'baseUrl' => 'https://raniesantos.netlify.com',
-    'production' => false,
+    'owner' => [
+        'name' => 'Ranie Santos',
+        'twitter' => 'raniesantos32',
+        'github' => 'raniesantos',
+        'gitlab' => 'raniesantos',
+        'resume' => 'https://drive.google.com/file/d/0BxTkFtINjLyIYUFRQUxScUt0cXc/view?usp=sharing',
+    ],
     'collections' => [
         'posts' => [
             'path' => 'blog/{filename}',

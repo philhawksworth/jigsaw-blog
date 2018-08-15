@@ -25,7 +25,7 @@
                     @endif
                     <span class="has-text-primary">
                         <icon>calendar-o</icon> {{ date('F j, Y', $page->date) }}
-                        <icon>user-o</icon> {{ $page->site->owner->name }}
+                        <icon>user-o</icon> {{ $page->owner->name }}
                     </span>
                 </header>
 
